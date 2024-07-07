@@ -1,0 +1,154 @@
+// 定義變量
+$primary-color: #9933cc;
+$secondary-color: #33b5e5;
+$tertiary-color: #0099cc;
+
+// 定義 mixin
+@mixin column-size($cols) {
+  width: ($cols * 8.33%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// mobile
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: $primary-color;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: $secondary-color;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    &:hover {
+      background-color: #0099cc;
+    }
+  }
+}
+
+.aside {
+  background-color: $secondary-color;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+  background-color: $tertiary-color;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-s-1 {
+    @include column-size(1);
+  }
+  .col-s-2 {
+    @include column-size(2);
+  }
+  .col-s-3 {
+    @include column-size(3);
+  }
+  .col-s-4 {
+    @include column-size(4);
+  }
+  .col-s-5 {
+    @include column-size(5);
+  }
+  .col-s-6 {
+    @include column-size(6);
+  }
+  .col-s-7 {
+    @include column-size(7);
+  }
+  .col-s-8 {
+    @include column-size(8);
+  }
+  .col-s-9 {
+    @include column-size(9);
+  }
+  .col-s-10 {
+    @include column-size(10);
+  }
+  .col-s-11 {
+    @include column-size(11);
+  }
+  .col-s-12 {
+    @include column-size(12);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    @include column-size(1);
+  }
+  .col-2 {
+    @include column-size(2);
+  }
+  .col-3 {
+    @include column-size(3);
+  }
+  .col-4 {
+    @include column-size(4);
+  }
+  .col-5 {
+    @include column-size(5);
+  }
+  .col-6 {
+    @include column-size(6);
+  }
+  .col-7 {
+    @include column-size(7);
+  }
+  .col-8 {
+    @include column-size(8);
+  }
+  .col-9 {
+    @include column-size(9);
+  }
+  .col-10 {
+    @include column-size(10);
+  }
+  .col-11 {
+    @include column-size(11);
+  }
+  .col-12 {
+    @include column-size(12);
+  }
+}
